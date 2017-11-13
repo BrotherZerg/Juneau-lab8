@@ -59,9 +59,9 @@ $message=mysqli_real_escape_string($mysqli, $message);
 //perform database query
 
 $query  = "INSERT INTO `survey`(";
-	$query .= "  `Name`, `Email`, `Telephone`, `Campus Status`, ";
-	$query .= "  `Food Location1`, `Food Location2`, `Food Location3`, `Food Location4`, `Food Location5`, `Quality Rate`, `Food Purchase`, ";
-	$query .= "  `Where To Get Food`, `Dietary Needs`, `Special Dietary`, ";
+	$query .= "  `Name`, `Email`, `Telephone`, `CampusStatus`, ";
+	$query .= "  `FoodLocation1`, `FoodLocation2`, `FoodLocation3`, `FoodLocation4`, `FoodLocation5`, `QualityRate`, `FoodPurchase`, ";
+	$query .= "  `WhereToGet Food`, `DietaryNeeds`, `SpecialDietary`, ";
 	$query .= "  `Cafeteria`, `Message`";
 	$query .= ") VALUES (";
 	$query .= "  '{$name}', '{$email}', '{$telephone}', '{$statusselect}', ";
