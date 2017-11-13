@@ -60,7 +60,7 @@ $message=mysqli_real_escape_string($mysqli, $message);
 
 $query  = "INSERT INTO `survey`(";
 	$query .= "  `Name`, `Email`, `Telephone`, `Campus Status`, ";
-	$query .= "  `Food Location`, `Quality Rate`, `Food Purchase`, ";
+	$query .= "  `Food Location1`, `Food Location2`, `Food Location3`, `Food Location4`, `Food Location5`, `Quality Rate`, `Food Purchase`, ";
 	$query .= "  `Where To Get Food`, `Dietary Needs`, `Special Dietary`, ";
 	$query .= "  `Cafeteria`, `Message`";
 	$query .= ") VALUES (";
