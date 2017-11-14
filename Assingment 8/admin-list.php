@@ -3,11 +3,12 @@
   $mysqli = new mysqli('66.147.242.186', 'urcscon3_juneau', 'coffee1N', 'urcscon3_juneau');
 
   $sql = "SELECT * FROM `survey`";
-  $result = mysqli_query($mysqli,$sql);
+  
+  $number = $_POST['number'];
+  $query .= "WHERE ID = {$number}";
 
-  $number=trim(stripslashes($_POST["number"]));
+  $result = mysqli_query($mysqli,$query);
 ?>
-
 
 
 <!DOCTYPE html>
@@ -16,7 +17,7 @@
   <title>Assignment 8</title>
 </head>
 <body>
-  <h1 align = "center">Member Data</h1>
+  <h1 align = "center"><?php echo $row["Name"]; ?>'s Survey Result</h1>
   <table>
 <?php
 
@@ -35,11 +36,19 @@
     <tr><td>Special Dietary:</td><td><?php echo $row["SpecialDietary"]; ?></td></tr>
     <tr><td>Cafeteria:</td><td><?php echo $row["Cafeteria"]; ?></td></tr>
     <tr><td>Message:</td><td><?php echo $row["Message"]; ?></td></tr>   
-      
+   
     
   <?php } ?>
   
   </table>
+  <br>
+  <form method= "post" action= "delete.php">
+    <a href="delete.php">Delete</a>
+  </form>
+
+  <form method= "post" action= "update.php">
+  <a href="update.php">Update</a>
+
 
 </body>
 </html>
