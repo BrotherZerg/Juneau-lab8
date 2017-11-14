@@ -3,11 +3,13 @@
   $mysqli = new mysqli('66.147.242.186', 'urcscon3_juneau', 'coffee1N', 'urcscon3_juneau');
 
   $sql = "SELECT * FROM `survey`";
+
+
   $result = mysqli_query($mysqli,$sql);
 ?>
 
 <!doctype html>
-<html lang="en">
+<html class="no-js" lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -42,6 +44,7 @@
           <th>Name</th>
           <th>Email</th>
           <th>Telephone</th>
+
         </tr>
 
   <?php
@@ -62,7 +65,7 @@
       <h4>Search for a record below:</h4>
       <form method= "post" action= "admin-list.php">
         <table>
-          <tr><td>ID:</td><td><input type="number" id="number" name="number"></td></tr>
+          <tr><td>ID:</td><td><input type="text" id="id" name="id"></td></tr>
           <tr><td><input type="submit" id="submit" name="submit" value="View Result!"></td></tr>
         </table>
       </form>
@@ -90,3 +93,6 @@
 
   mysqli_close($mysqli);
 ?>
+
+
+
