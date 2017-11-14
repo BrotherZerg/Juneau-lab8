@@ -80,7 +80,5 @@ if ($result) {
 	}
 	
 //send the user to the thank you webpage
-header("Location: survey-thanks.php");
+header("Location: survey-thanks.html");
 ?>
-
-
