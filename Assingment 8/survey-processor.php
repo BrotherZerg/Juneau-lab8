@@ -66,7 +66,7 @@ $query  = "INSERT INTO `survey`(";
 	$query .= ") VALUES (";
 	$query .= "  '{$name}', '{$email}', '{$telephone}', '{$statusselect}', ";
 	$query .= "  '{$location1}', '{$location2}', '{$location3}', '{$location4}', '{$location5}', ";
-	$query .= "  '{$qualityselect}', '{$purchaseselect}', '{$eatselect}', '{$dietaryselect}' ";
+	$query .= "  '{$qualityselect}', '{$purchaseselect}', '{$eatselect}', '{$dietaryselect}', ";
 	$query .= "  '{$specialdietaryselect}', '{$cafeteriaselect}', '{$message}'";
 	$query .= ")";
 
