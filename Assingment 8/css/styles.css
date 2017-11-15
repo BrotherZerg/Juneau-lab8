@@ -2,8 +2,18 @@ h2{
 	color: lightblue;
 }
 
+h4{
+	font-size: 20px;
+}
+
 .foot p{
 	font-family: verdana;
 	font-size: 15px;
 	text-align: center;
+}
+
+.search{
+    float: left;
+    width: 33.33%;
+    padding: 15px;
 }
