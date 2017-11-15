@@ -22,7 +22,7 @@
    <?php
       while($row = mysqli_fetch_assoc($result)){
     ?>
-    <h1 align = "center"> <?php echo $row["Name"]?>'s Survey Result</h1>
+    <h1 align = "center"> Update #<?php echo $row["ID"]?>'s Survey Result</h1>
     <body>
         <table border="1" align="center" style="line-height: 25px;">
 
@@ -136,4 +136,5 @@
 ?>
 <br>
 <a href="admin.php">Back</a>
+
 
