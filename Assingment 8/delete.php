@@ -22,7 +22,7 @@ $result = mysqli_query($mysqli, $query);
 			if ($result) {
 		?>
     		<div>
-    		<h2 align = "center" >The record has been deleted!</h2>	
+    		<h2 align = "left" >The record has been deleted!</h2>	
     		</div>
 
 		<?php
