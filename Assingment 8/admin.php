@@ -85,7 +85,13 @@
       <form method= "post" action= "update.php">
         <table>
           <tr><td>ID:</td><td><input type="text" id="updateid" name="id"></td></tr>
+          <tr><td>Name:</td><td><input type="text" id="updateid" name="name"></td></tr>
+          <tr><td>Email:</td><td><input type="text" id="updateid" name="email"></td></tr>
+          <tr><td>Telephone:</td><td><input type="text" id="updateid" name="telephone"></td></tr>
           <tr><td><input type="submit" id="submit" name="submit" value="Update Records!"></td></tr>
+
+
+
         </table>
       </form>
       </div>
@@ -113,6 +119,4 @@
 
   mysqli_close($mysqli);
 ?>
-
-
 
