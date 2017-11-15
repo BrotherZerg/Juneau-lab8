@@ -7,9 +7,9 @@ $number = $_POST['number'];
 $updatedName = Trim(stripslashes($_POST['name']));
 $updatedEmail =  Trim(stripslashes($_POST['email']));
 
-$query  = "UPDATE `survey` SET ";
+$query  = "UPDATE survey SET ";
 $query .= "Name = '$updatedName', Email = '$updatedEmail' ";
-$query .= "WHERE ID = {$number}";
+$query .= "WHERE ID = '{$number}' ";
 $result = mysqli_query($mysqli, $query);
 
 
