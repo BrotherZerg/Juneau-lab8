@@ -1,10 +1,7 @@
 <?php
   // Create a database connection
   $mysqli = new mysqli('66.147.242.186', 'urcscon3_juneau', 'coffee1N', 'urcscon3_juneau');
-
   $sql = "SELECT * FROM `survey`";
-
-
   $result = mysqli_query($mysqli,$sql);
 ?>
 
@@ -82,12 +79,10 @@
 
       <div class = search>
       <h4>Enter ID to update a record below:</h4>
-      <form method= "post" action= "update.php">
+      <form method= "post" action= "updaterecords.php">
         <table>
           <tr><td>ID:</td><td><input type="text" id="updateid" name="id"></td></tr>
-          <tr><td>Name:</td><td><input type="text" id="updateid" name="name"></td></tr>
-          <tr><td>Email:</td><td><input type="text" id="updateid" name="email"></td></tr>
-          <tr><td>Telephone:</td><td><input type="text" id="updateid" name="telephone"></td></tr>
+
           <tr><td><input type="submit" id="submit" name="submit" value="Update Records!"></td></tr>
 
 
@@ -116,7 +111,5 @@
 
 <?php
   mysqli_free_result($result);
-
   mysqli_close($mysqli);
 ?>
-
