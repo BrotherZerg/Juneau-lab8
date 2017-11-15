@@ -60,15 +60,35 @@
   <?php } ?>
       </table>
 
+      <div class = search>
+          <h4>Enter ID to search for a record below:</h4>
+            <form method= "post" action= "records.php">
+              <table>
+                <tr><td>ID:</td><td><input type="text" id="recordsid" name="id"></td></tr>
+                <tr><td><input type="submit" id="submit" name="submit" value="View Records!"></td></tr>
+              </table>
+            </form>
+      </div>
 
-      <p>From the table above, we can search for any survey records with an appropriate ID.</p>
-      <h4>Search for a record below:</h4>
-      <form method= "post" action= "admin-list.php">
+      <div class = search>
+      <h4>Enter ID to delete a record below:</h4>
+      <form method= "post" action= "delete.php">
         <table>
-          <tr><td>ID:</td><td><input type="text" id="id" name="id"></td></tr>
-          <tr><td><input type="submit" id="submit" name="submit" value="View Result!"></td></tr>
+          <tr><td>ID:</td><td><input type="text" id="deleteid" name="id"></td></tr>
+          <tr><td><input type="submit" id="submit" name="submit" value="Delete Records!"></td></tr>
         </table>
       </form>
+      </div>
+
+      <div class = search>
+      <h4>Enter ID to update a record below:</h4>
+      <form method= "post" action= "update.php">
+        <table>
+          <tr><td>ID:</td><td><input type="text" id="updateid" name="id"></td></tr>
+          <tr><td><input type="submit" id="submit" name="submit" value="Update Records!"></td></tr>
+        </table>
+      </form>
+      </div>
 
     </div>
 
