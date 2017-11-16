@@ -6,7 +6,7 @@
 ?>
 
 <!doctype html>
-<html class="no-js" lang="en">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,7 +17,7 @@
 
   <body>   
     <!-- Start Top Bar -->
-    <div class="top-bar">
+    <div class="top-bar part">
       <div class="top-bar-left">
         <ul class="menu">
           <li class="menu-text">Team Juneau</li>
@@ -96,8 +96,12 @@
   <hr>
   
   <footer>
-    <div>
-      <p>Copyright &copy; 2017 - This webpage is created by Team Juneau</p>
+    <div class="foot">
+      <p>Copyright &copy; 2017 - This webpage is created by Team Juneau
+      <br>
+      Here is a reference we used for assignment 8:
+            <a href="http://www.rochester.edu/dining/learn-more/about-us/">U of R Dining Services</a></li>
+      </p>    
     </div> 
   </footer>
     
