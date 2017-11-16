@@ -28,7 +28,6 @@ $location3=$_POST["location3"];
 $location4=$_POST["location4"];
 $location5=$_POST["location5"];
 
-
 //question3
 $qualityselect=$_POST["quality"];
 
@@ -60,14 +59,14 @@ $message=mysqli_real_escape_string($mysqli, $message);
 
 $query  = "INSERT INTO `survey`(";
 	$query .= "  `Name`, `Email`, `Telephone`, `CampusStatus`, ";
-	$query .= "  `FoodLocation1`, `FoodLocation2`, `FoodLocation3`, `FoodLocation4`, `FoodLocation5`, `QualityRate`, `FoodPurchase`, ";
+	$query .= "  `FoodLocation`, `QualityRate`, `FoodPurchase`, ";
 	$query .= "  `WhereToGetFood`, `DietaryNeeds`, `SpecialDietary`, ";
 	$query .= "  `Cafeteria`, `Message`";
 	$query .= ") VALUES (";
 	$query .= "  '{$name}', '{$email}', '{$telephone}', '{$statusselect}', ";
-	$query .= "  '{$location1}', '{$location2}', '{$location3}', '{$location4}', '{$location5}', ";
-	$query .= "  '{$qualityselect}', '{$purchaseselect}', '{$eatselect}', '{$dietaryselect}', ";
-	$query .= "  '{$specialdietaryselect}', '{$cafeteriaselect}', '{$message}'";
+	$query .= "  '{$location1}, {$location2}, {$location3}, {$location4}, {$location5}', '{$qualityselect}', '{$purchaseselect}',  ";
+	$query .= "  '{$eatselect}', '{$dietaryselect}', '{$specialdietaryselect}', ";
+	$query .= "  '{$cafeteriaselect}', '{$message}'";
 	$query .= ")";
 
 	$result = mysqli_query($mysqli, $query);
