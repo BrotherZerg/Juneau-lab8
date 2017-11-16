@@ -4,30 +4,38 @@
   $id = $_POST ['id'];
   $sql = "SELECT * FROM `survey`";
   $sql .= "WHERE ID = {$id} ";
-  //$query .= "WHERE id = {$id} ";
   $sql .= "LIMIT 1";
-  
-  
+
   $result = mysqli_query($mysqli,$sql);
-
-  //$sql = "SELECT * FROM table WHERE id >= $curID ORDER BY id ASC LIMIT 4";
-
 ?>
 
 <!doctype html>
-<html class="no-js" lang="en">
-  <head>
-  <title>Assignment 8</title>
-  </head>
-   <?php
+<html lang="en">
+ 	<head>
+	    <meta charset="utf-8" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	    <title>CSC 174 | Team Juneau</title>
+	    <link rel="stylesheet" href="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+	    <link rel="stylesheet" type="text/css" href="css/styles.css">
+  	</head>
+   	<?php
       while($row = mysqli_fetch_assoc($result)){
     ?>
-    <h1 align = "center"> Update #<?php echo $row["ID"]?>'s Survey Result</h1>
+    <!-- Start Top Bar -->
+		<div class="top-bar part">
+  			<div class= "top-bar-left">
+    			<ul class="menu">
+      				<li class="menu-text">Team Juneau</li>
+    			</ul>
+  			</div>
+		</div>
+  	<!-- End Top Bar -->
+    <h1 align = "center"> #<?php echo $row["ID"]?>'s Survey Result</h1>
     <body>
-        <table border="1" align="center" style="line-height: 25px;">
+    
 
- 
-  <form method= "post" action= "update.php">
+ 	<div class="row column">
+  	<form method= "post" action= "update.php">
         <table>
           <tr><td>ID:</td><td><input readonly type="text" id="updateid" name="id" value = "<?php echo $row["ID"]?>"></td></tr>
           <tr><td>Name:</td><td><input type="text" id="updateid" name="name" value = "<?php echo $row["Name"]?>"></td></tr>
@@ -114,17 +122,21 @@
       
       <label>Comments, Questions or Concerns?</label><br>
           <table>
-            <tr><td><TEXTAREA name="message" id="message"></TEXTAREA></tr></td>
-            <tr><td><input type="submit" id="submit" name="submit" value="Confirm"></tr></td>
+            <tr><td><TEXTAREA name="message" id="message"></TEXTAREA></td></tr>
+            <tr><td><input type="submit" id="submit" name="submit" value="Confirm"></td></tr>
           </table>
 
 
 
-  
-  </form>  
-  <?php } ?>
+
+  	
+  	</form>  
+  	<div class="row column">
+  	<?php } ?>
  
 
+  	<br>
+  	<a href="admin.php" class="button large">Back</a>
 
 </body>
 </html>
@@ -134,7 +146,3 @@
 
   mysqli_close($mysqli);
 ?>
-<br>
-<a href="admin.php">Back</a>
-
-
