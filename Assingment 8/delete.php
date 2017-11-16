@@ -13,16 +13,30 @@ $result = mysqli_query($mysqli, $query);
 ?>
 
 <!doctype html>
-<html class="no-js" lang="en">
-	<head>
-		<title>Assignment 8 </title>
-	</head>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSC 174 | Team Juneau</title>
+    <link rel="stylesheet" href="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+  </head>
 		<body>
+		<!-- Start Top Bar -->
+  			<div class="top-bar part">
+    			<div class= "top-bar-left">
+      				<ul class="menu">
+        				<li class="menu-text">Team Juneau</li>
+      				</ul>
+    			</div>
+  			</div>
+  		<!-- End Top Bar -->
+  		<br><br><br><br>
 		<?php
 			if ($result) {
 		?>
     		<div>
-    		<h2 align = "left" >The record has been deleted!</h2>	
+    			<h1 align = "center" >The record of number <?php echo $_POST['id'] ?> has been deleted!</h1>	
     		</div>
 
 		<?php
@@ -31,15 +45,24 @@ $result = mysqli_query($mysqli, $query);
 			}
 		?>
 
+		<br>
+		<div align="center"><a href="admin.php" class="button large">Back</a></div>
+		<br><br><br><br>
+		<hr>
+		<footer>
+      		<div class="foot">
+        		<p>Copyright &copy; 2017 - This webpage is created by Team Juneau
+       			 <br>
+        		Here is a reference we used for assignment 8:
+              	<a href="http://www.rochester.edu/dining/learn-more/about-us/">U of R Dining Services</a></li>
+        		</p>    
+      		</div> 
+    	</footer>
 
 		</body>
 </html>
 
 
-
 <?php
-	mysqli_close($connection);
+	mysqli_close($mysqli);
 ?>
-
-<br>
-<a href="admin.php">Back</a>
