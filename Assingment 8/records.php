@@ -15,16 +15,32 @@
 ?>
 
 <!doctype html>
-<html class="no-js" lang="en">
+<html lang="en">
   <head>
-  <title>Assignment 8</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSC 174 | Team Juneau</title>
+    <link rel="stylesheet" href="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
   </head>
-   <?php
-      while($row = mysqli_fetch_assoc($result)){
-    ?>
-    <h1 align = "center"> <?php echo $row["Name"]?>'s Survey Result</h1>
-    <body>
-        <table border="1" align="center" style="line-height: 25px;">
+
+  <body>
+    <!-- Start Top Bar -->
+  <div class="top-bar part">
+    <div class= "top-bar-left">
+      <ul class="menu">
+        <li class="menu-text">Team Juneau</li>
+      </ul>
+    </div>
+  </div>
+  <!-- End Top Bar -->
+
+  <?php
+    while($row = mysqli_fetch_assoc($result)){
+  ?>
+  <h1 align = "center"> <?php echo $row["Name"]?>'s Survey Result</h1>
+
+      <table border="1" align="center" style="line-height: 25px;">
 
  
     <tr><td>ID:</td><td><?php echo $row["ID"]; ?></td></tr>
@@ -32,7 +48,7 @@
     <tr><td>Email:</td><td><?php echo $row["Email"]; ?></td></tr>
     <tr><td>Telephone:</td><td><?php echo $row["Telephone"]; ?></td></tr>
     <tr><td>Campus Status:</td><td><?php echo $row["CampusStatus"]; ?></td></tr>
-    <tr><td>Food Location:</td><td><?php echo $row["FoodLocation1"]; ?></td><td><?php echo $row["FoodLocation2"]; ?></td><td><?php echo $row["FoodLocation3"]; ?></td><td><?php echo $row["FoodLocation4"]; ?></td><td><?php echo $row["FoodLocation5"]; ?></td></tr>
+    <tr><td>Food Location:</td><td><?php echo $row["FoodLocation"]; ?></td></tr>
     <tr><td>Quality Rate:</td><td><?php echo $row["QualityRate"]; ?></td></tr>
     <tr><td>Food Purchase:</td><td><?php echo $row["FoodPurchase"]; ?></td></tr>
     <tr><td>Where To Get Food:</td><td><?php echo $row["WhereToGetFood"]; ?></td></tr>
@@ -45,6 +61,19 @@
  </table>
  
 
+  <br>
+  <div align="center"><a href="admin.php" class="button large">Back</a></div>
+  <hr>
+   <footer>
+      <div class="foot">
+        <p>Copyright &copy; 2017 - This webpage is created by Team Juneau
+        <br>
+        Here is a reference we used for assignment 8:
+              <a href="http://www.rochester.edu/dining/learn-more/about-us/">U of R Dining Services</a></li>
+        </p>    
+      </div> 
+    </footer>
+
 
 </body>
 </html>
@@ -54,7 +83,3 @@
 
   mysqli_close($mysqli);
 ?>
-<br>
-<a href="admin.php">Back</a>
-
-
